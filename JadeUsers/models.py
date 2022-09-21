@@ -6,11 +6,14 @@ from django.contrib.auth.base_user import BaseUserManager
 
 
 class CustomUserManager(BaseUserManager):
-    def create_user(self, username, password , **extra_fields):
+    def create_user(self, username, password,password2 , **extra_fields):
         if not username:
             raise ValueError('The username must be set')
+        if password != password2:
+            raise ValueError("passwords do not match")
         user = self.model(username=username,**extra_fields)
         user.set_password(password)
+        user.set_password(password2)
         user.save()
         return user
 
@@ -24,8 +27,10 @@ class CustomUserManager(BaseUserManager):
             raise ValueError('Superuser must have is_superuser=True.')
         return self.create_user(username, password, **extra_fields)
 
-class CustomUser(AbstractUser):
+class CustomUser(AbstractUser): 
+    fullname = models.CharField(max_length=150, blank=True)
     password2 = models.CharField(max_length=128) 
     objects = CustomUserManager()
     def __str__(self):
         return self.username
+    REQUIRED_FIELDS = ["password2"]

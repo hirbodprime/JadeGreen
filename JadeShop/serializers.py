@@ -3,7 +3,13 @@ from .models import ProductModel
 
 
 
-class ProductModelSerializer(serializers.ModelSerializer):
+class ProductListModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductModel
+        fields = ('name','price' , 'offer')
+
+
+class ProductDetailModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProductModel
         fields = ('name' ,'discription','price' , 'offer')
