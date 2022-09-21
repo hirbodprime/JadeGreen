@@ -6,3 +6,6 @@ class JadeusersConfig(AppConfig):
     name = 'JadeUsers'
     def ready(self):
         import JadeUsers.signals
+
+
+
