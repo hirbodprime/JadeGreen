@@ -4,4 +4,4 @@ from .models import ActivitiesModel
 class ActivitiesModelSerializers(serializers.ModelSerializer):
     class Meta:
         model = ActivitiesModel 
-        fields = ('name' , ' discription')
+        fields = ('name' , 'discription')

@@ -13,6 +13,6 @@ class ProductDetailViewApi(ListAPIView):
     queryset = ProductModel.objects.all()
     serializer_class = ProductDetailModelSerializer
     def get_queryset(self):
-        return ProductModel(ProductModel.objects.filter(id = self.kwargs["id"]))
+        return ProductModel.objects.filter(id = self.kwargs["id"])
 
 
