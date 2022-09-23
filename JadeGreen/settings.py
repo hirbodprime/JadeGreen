@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework' , 'JadeShop' , 'JadeBlog' , 'JadeActivity' ,'JadeUsers'
+    'rest_framework' , 'JadeShop' , 'JadeBlog' , 'JadeActivity' ,'JadeUsers' , 'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -137,9 +137,9 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
         # 'rest_framework.authentication.SessionAuthentication',
     ],
-    # 'DEFAULT_PERMISSION_CLASSES': [
+    'DEFAULT_PERMISSION_CLASSES': [
         # 'rest_framework.permissions.IsAdminUser',
         # 'rest_framework.permissions.AllowAny',
-        # 'rest_framework.permissions.IsAuthenticated',
-    # ],
+        'rest_framework.permissions.IsAuthenticated',
+    ],
 }

@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model 
 from django.utils import timezone
-from django.contrib.auth import authenticate
+
 
 
 
@@ -22,6 +22,8 @@ class UserSerializer(serializers.ModelSerializer):
         return user
         
     def validate(self, data):
+        if not data.get("email"):
+            raise serializers.ValidationError("email must be set")
         if not data.get('password') or not data.get('password2'):
             raise serializers.ValidationError("Please enter a password and "
                 "confirm it.")
@@ -30,7 +32,7 @@ class UserSerializer(serializers.ModelSerializer):
         return data
     class Meta:
         model = UserModel
-        fields = ( "id", "username","email", "password", "password2")
+        fields = ( "id","auth_token", "username","email", "password", "password2")
 
 
 class DetailUserSerializer(serializers.ModelSerializer):
@@ -38,4 +40,4 @@ class DetailUserSerializer(serializers.ModelSerializer):
     fullname = serializers.CharField(read_only=True)
     class Meta:
             model = UserModel
-            fields = ( "id", "username","first_name" , "last_name","email",'fullname',"date_joined")
+            fields = ( "id","auth_token" ,"username","first_name" , "last_name","email",'fullname',"date_joined")
