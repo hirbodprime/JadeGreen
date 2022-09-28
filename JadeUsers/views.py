@@ -34,33 +34,26 @@ def login_user(request):
         data = {}
         reqBody = json.loads(request.body)
         username = reqBody['username']
-        print(username)
+        # print(username)
         password = reqBody['password']
         try:
-
             Account = UserModel.objects.get(username=username)
         except BaseException as e:
             raise ValidationError({"400": f'{str(e)}'})
-
         token = Token.objects.get_or_create(user=Account)[0].key
-        print(token)
+        # print(token)
         if not check_password(password, Account.password):
             raise ValidationError({"message": "Incorrect Login credentials"})
-
         if Account:
             if Account.is_active:
                 print(request.user)
                 login(request, Account)
                 data["message"] = "user logged in"
                 data["username"] = Account.username
-
                 Res = {"data": data, "token": token}
-
                 return Response(Res)
-
             else:
                 raise ValidationError({"400": f'Account not active'})
-
         else:
             raise ValidationError({"400": f'Account doesnt exist'})
 
@@ -75,13 +68,13 @@ class CreateUserAPIView(gn.CreateAPIView):
 
 
 class ListUsersAPIView(gn.ListAPIView):
-    permission_classes = [p.IsAdminUser]
+    permission_classes = [p.IsAuthenticated]
     serializer_class = UserSerializer
     queryset = UserModel.objects.all()
 
 
 class DetailUsersAPIView(gn.ListAPIView):
-    permission_classes = [p.IsAdminUser]
+    permission_classes = [p.AllowAny]
     queryset = UserModel.objects.all()
     serializer_class = DetailUserSerializer
     def get_queryset(self):

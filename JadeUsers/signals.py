@@ -14,8 +14,8 @@ def updateUser(sender, instance, **kwargs):
         user.password2 = user.password
     user.password2 = make_password(user.password2)
     if not user.first_name and not user.last_name:
-        user.first_name = "anonymousUser"
-        user.last_name = f"{anonymousUser}-{user.id}"
+        user.first_name = "jadeUser"
+        user.last_name = f"{anonymousUser}"
         user.fullname = f"{user.first_name}-{user.last_name}"
     if not len(user.password) == 88: # lenght of hashed plain text is 88
         user.password = make_password(user.password)

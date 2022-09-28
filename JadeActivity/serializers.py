@@ -5,3 +5,4 @@ class ActivitiesModelSerializers(serializers.ModelSerializer):
     class Meta:
         model = ActivitiesModel 
         fields = ('name' , 'discription')
+        #  depth = 1 returns the data of forgein key models nested 

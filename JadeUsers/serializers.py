@@ -11,7 +11,7 @@ UserModel = get_user_model()
 class UserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
     password2 = serializers.CharField(write_only=True)
-    # date_joined = serializers.DateTimeField(read_only=True)
+    auth_token = serializers.CharField(read_only=True)
     def create(self, validated_data):
         user = UserModel.objects.create_user(
             username=validated_data['username'],
