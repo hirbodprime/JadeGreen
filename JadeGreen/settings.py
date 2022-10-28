@@ -143,3 +143,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
 }
+
+
+LOGIN_REDIRECT_URL = 'http://127.0.0.1:8000/'
+LOGIN_URL = '/login'

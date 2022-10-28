@@ -16,6 +16,7 @@
             <form id="post-form">
                 <h1>ثبت نام</h1>
                 <h3 id="success"> حساب شما با موفقیت ساخته شد </h3>
+                {% csrf_token %}
                 <div class="form-group">                  
                         <label for="username" class="username">
                             <i class="material-symbols-outlined key">person</i>

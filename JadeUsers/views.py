@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from django.contrib.auth import get_user_model , authenticate , login , logout
 from django.views.decorators.csrf import csrf_exempt
 from .serializers import UserSerializer , DetailUserSerializer 
@@ -23,8 +24,10 @@ UserModel = get_user_model()
 def registerView(req):
     return render(req , 'JadeUsers/SignUp.html')
 
-def loginView(req):
-    return render(req , 'JadeUsers/login.html')
+def loginView(request):
+    if request.user and request.user.is_authenticated:
+        return redirect("homeviewname")
+    return render(request , 'JadeUsers/login.html')
 
 @api_view(["GET"])
 @permission_classes([p.IsAuthenticated])
@@ -32,6 +35,8 @@ def UserLogout(request):
     request.user.auth_token.delete()
     logout(request)
     return Response('User Logged out successfully', status=HTTP_200_OK)
+
+
 
 @api_view(["POST"])
 @permission_classes([p.AllowAny])
@@ -62,7 +67,55 @@ def login_user(request):
         else:
             raise ValidationError({"400": f'Account doesnt exist'})
 
+# test ------------------------------------------------------------
 
+def login_userview(request):
+    logout(request)
+    resp = {"status":'failed','msg':''}
+    username = ''
+    password = ''
+    if request.POST:
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                resp['status']='success'
+                print(resp)
+                # return redirect("/")
+            else:
+                resp['msg'] = "Incorrect username or password"
+        else:
+            resp['msg'] = "Incorrect username or password"
+    return HttpResponse(json.dumps(resp),content_type='application/json')
+
+def logout_userview(request):
+    logout(request)
+    return redirect('/')
+
+def register_userview(request):
+    resp = {"status":'failed','msg':''}
+    username = ''
+    password = ''
+    passwordRepeat = ''
+    if request.POST:
+        username = request.POST['username']
+        password = request.POST['password']
+        passwordRepeat = request.POST['passwordRepeat']
+        user = UserModel.objects.create_user(username=username , password=password , password2=passwordRepeat)
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            # if user.is_active:
+                login(request, user)
+                resp['status']='success'
+                print(resp)
+                # return redirect("/")
+            # else:
+            #     resp['msg'] = "Incorrect username or password"
+        else:
+            resp['msg'] = "Incorrect username or password"
+    return HttpResponse(json.dumps(resp),content_type='application/json')
 
 
 class CreateUserAPIView(gn.CreateAPIView):

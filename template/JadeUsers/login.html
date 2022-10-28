@@ -15,12 +15,13 @@
         <div class="login-form">
             <form id="loginForm">
                 <h1>ورود</h1>
+                {% csrf_token %}
                 <div class="form-group">
                     <label for="username" class="username">
                         <i class="material-symbols-outlined key">person</i>
                         نام کاربری خود را وارد کنید
                     </label>
-                    <input class="text-input" id="username" type="text" placeholder="نام کاربری" name="email">
+                    <input class="text-input" id="username" type="text" placeholder="نام کاربری" name="username">
                 </div>
                 <div class="form-group">
                     <label for="password" class="password">
