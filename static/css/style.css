@@ -1,0 +1,935 @@
+@font-face {
+    font-family: 'IRANSans';
+    src: url("../fonts/IRANSansFont.ttf") format("truetype");
+}
+
+body {
+    font-family: 'IRANSans';
+    margin: 0px;
+    direction: rtl;
+    text-align: right;
+} 
+
+/*  -- - - - - - - - - - - - - -  - - - HEADER - -  - - - - - - - - - - - --- -  */
+
+.img-jadegreen {
+    width: 251px;
+    height: 60px;
+    text-align: right;
+    color: #799350;
+    user-select: none;
+}
+
+
+.header {
+    background: #FBFCFA;
+    padding-top: 24px;
+    padding-bottom: 36px;
+    margin-bottom: 0px;
+}
+
+.menu>ul {
+    margin-bottom: 0px;
+    list-style-type: none;
+    display: -webkit-box;
+    align-items: end;
+    white-space: nowrap;
+}
+
+.menu>ul>li>a {
+    text-decoration: none;
+    color: black;
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+.div-search-box {
+    position: relative;
+}
+
+.div-search-box .search {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    padding: 10px;
+    color: #646563;
+}
+
+.search-box {
+    width: 96%;
+    height: 48px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 12px 12px 12px 16px;
+    padding-right: 50px;
+    margin: 10px;
+    gap: 12px;
+    background-color: #FBFCFA;
+    border: none;
+    border-radius: 8px;
+    font-family: 'IRANSans';
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.div-button-login {
+    padding-left: 40px;
+}
+
+.div-button-login button i {
+    margin: auto 0px;
+    margin-right: 10px;
+}
+
+.div-button-login button span {
+    margin: auto 0px;
+    margin-left: 10px;
+} 
+/* hirbod */
+.div-button-login button a {
+    text-decoration: none;
+    color: black;
+} 
+
+.div-button-login {
+    display: flex;
+    justify-content: end;
+} 
+
+.div-button-login i{
+    margin-top: 10px;
+} 
+
+.button-login {
+    width: 160px;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: 1px solid #46552E;
+    color: #46552E;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'IRANSans';
+    background: #FBFCFA;
+    margin: 0px !important;
+}
+
+.cart {
+    margin-right: 20px;
+    width: 24px;
+    height: 24px;
+    color: #46552E;
+    cursor: pointer;
+}
+
+.person {
+    font-size: 24px;
+}
+
+.person2 {
+    font-size: 24px;
+    cursor: pointer;
+    color: #46552E;
+}
+
+.menu {
+    font-size: 24px;
+    cursor: pointer;
+    color: #46552E;
+}
+
+.img-jadegreen {
+    width: 251px;
+    height: 60px;
+    text-align: right;
+}
+
+li a,.dropbtn {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown a i {
+    position: absolute;
+}
+
+.dropdown .dropbtn:hover{
+    color:#AE431E;
+}
+
+.dropdown{
+    margin-left: 20px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    font-size: 16px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    background: #FFFFFF;
+    position: absolute;
+    z-index: 2;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    height: 167px;
+    width: 280px;
+    border-radius: 8px;
+    padding: 16px 0px 16px 0px;
+}
+
+#humberger-menu{
+    color: #799350;
+}
+
+.responsive-nav{
+    display: none;
+}
+
+.responsive-nav{
+    z-index: 3;
+    width: 284px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.responsive-logo{
+    width: 100%;
+    height: 70px;
+    padding: 16px;
+    border-bottom: 0.4px solid #000000;
+}
+
+.responsive-logo img{
+    width: 112px;
+    height: 27px;
+}
+
+.responsive-nav ul{
+    width: 100%;
+    height: 100%;
+    padding: 0px 14px;
+}
+
+.responsive-nav li{
+    list-style-type: none;
+    padding: 11px 0px 13px 0px;
+    border-bottom: 0.3px solid ;
+    border-color: #38383850;
+    margin: 0px;
+}
+
+.responsive-nav ul li:last-child{
+    border: none !important;
+}
+
+.responsive-nav li a{
+    padding: 0px;
+    font-family: 'IRANSans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: 0.005em;
+    color: #424750;
+}
+
+.temp{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+/* - - - -  - - - - - - - - - - - - - - - - - SLIDER - - - - -  - - - - - - -  - - - - -  - */
+#carousel {
+    margin-top: 0px;
+}
+.carousel-item {
+    height: 700px;
+}
+
+.slide-image {
+    height: 100%;
+}
+
+.carousel-indicators button{ 
+    height: 17px !important;
+    width: 17px !important;
+    background-color: #FBFCFA;
+    border-radius: 50% !important;
+    margin: 0 5px !important ;
+}
+
+.carousel-indicators .active {
+    background-color: rgb(174, 67, 30) !important;
+}
+
+.flesh {
+    cursor: pointer !important; 
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    box-shadow: 1px 1px 10px 3px #dddcdc !important;
+}
+
+/*  -- - - - - - - - - - - -  - -- - - -  -- - -  - - SERVICES  - - - - - - - - - - - - - - -- - -  - - */
+
+.services{
+    margin: 56px 0px !important;
+    display: flex !important;
+    justify-content: space-around !important;
+    text-align: center !important;
+}
+
+.services .text-service {
+    font-family: 'IRANSans' ;
+    font-size: 16px ;
+    font-weight: 400 ;
+    line-height: 32px ;
+    letter-spacing: 0.0016em ; 
+}
+
+/* -  - - - - - - - - - - - - - - - - - - -- - - PISHNAHAD SHEGEFT ANGIZ  -- -  - - - - - - - - - -- -   */
+
+#offers{
+    margin-top: 80px;
+    width: 100% ;
+    background: #99B270;
+    padding: 48px 0px; 
+}
+  
+.text-offCAT {
+    font-family: 'IRANSans';
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0.0025em;
+    text-align: right;
+    color: #FBFCFA;
+    margin-right: 12px;
+}
+
+.offer-badge{
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 16px;
+    right: 16px;
+    border-radius: 50%;
+    background-color: #DC5C31;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.takhfif{
+    font-family: 'IRANSans';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #FBFCFA;
+    letter-spacing: 0.0025em;
+    text-align: right;
+}
+
+.button-seeAll {
+    display: flex;
+    cursor: pointer;
+    width: 173px;
+    height: 48px;
+    font-family: 'IRANSans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 157%;
+    color: #FBFCFA ;
+    border: 1px solid #FBFCFA;
+    border-radius: 8px;
+    background: #99B270;
+    margin-right: 5px;
+}
+
+.product{
+    margin: 50px 0 50px 30px;
+    max-width: 302px;
+    border-radius: 8px;
+    border: none;
+    z-index: 2;
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.product-image{
+    width: 302px;
+    height: 214px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 1px solid #D0D0D0;
+}
+
+.husky-bird{
+    font-family: 'IRANSans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    margin: 5px 20px;
+    text-align: right;
+    color: #040502;
+}
+  
+.span-price{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px;
+}
+  
+.last-price{
+    color: red !important;
+    text-decoration: line-through;
+}
+  
+.price{
+    font-family: 'IRANSans';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.004em;
+    text-align: right;
+    color: #040502;
+}
+
+#offers button{
+    background: #99B270 ;
+    border: 1px solid #FFFFFF ;
+    color: #fff ;
+    border-radius: 8px;
+}
+
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.slide-content{
+    margin: 0 75px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+  /* - - - - - - -- - - - - - - - - -- - - - - - - - CATEGORY  -- - - - - - - - - - - - - - -- - -  */
+
+#category{
+    margin-top: 80px;
+    width: 100%;
+    background-color: #E68969;
+    border: none;
+    padding: 56px 0px;
+}
+
+.category{
+    margin: 56.5px 0px 56.5px 24px;
+    border-radius: 8px;
+    max-width: 302px;
+    max-height: 302px;
+}
+
+#category button{
+    background-color: #E68969;
+    color: #fff;
+    border: 1px solid #fff;
+}
+  
+.category-image{
+    max-width: 302px;
+    max-height: 302px;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.2) 36.3%, rgba(0, 0, 0, 0.158667) 48.33%, rgba(0, 0, 0, 0.136) 57.96%, rgba(0, 0, 0, 0.103641) 64.75%, rgba(0, 0, 0, 0) 100%);
+    width: 100%;
+    border-radius: 8px;
+}
+  
+.text-image {
+    width: 180px;
+    z-index: 2;
+    margin: 0px;
+    font-family: 'IRANSans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 166%;
+    text-align: right;
+    letter-spacing: 0.0015em;
+    color: #FBFCFA;
+    padding: 0px 30px 20px 0px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.arrow{
+    margin: 0px 10px;
+}
+  
+/* - - - - - - - - -  - - - - - - - - - - - -NEVESHTE HA - - - - - - - - -- - - - - - - - - - - -  */
+
+#guides-posts {
+    font-family: 'IRANSans';
+    background-color: #F5F5F5;
+    padding-top: 84px;
+    padding-bottom: 106px;
+}
+
+.posts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    gap: 8px;
+    width: 100%;
+    height: 48px;
+  }
+
+.posts p {
+    font-family: 'IRANSans';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.0015em;
+    text-align: right;
+    color: #040502;
+    margin-right: 26px;
+}
+
+.button {
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 174px;
+    height: 48px;
+    border: 1px solid #040502;
+    border-radius: 8px;
+    margin-left: 54px;  
+}
+
+.bi-arrow-left {
+    margin-right: 10px;
+}
+
+.guides{ 
+    margin:10px 0px; 
+    margin-left: 20px;
+}
+
+.guides .guide {
+    margin-left: 24px;
+    padding: 0px;
+    max-width: 411px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px 3px #dddcdc;
+}
+
+.guides .guide img{
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.text-more span{
+    font-family: 'IRANSans';
+    font-style: normal;
+    font-weight: 700 ;
+    font-size: 14px ;
+    line-height: 157%;
+    text-align: right;
+    color: #040502 ;
+}
+  
+.text-more i {
+    position: absolute;
+    color: #040502;
+    margin-right: 9px;
+}
+
+.guides .guide .content {
+    padding: 10px 15px;
+}
+
+.content h3{
+    margin-bottom: 16px;
+}
+
+.div-actions {
+    color: rgb(108, 108, 108);
+    font-size: 0.95em;
+}
+
+.guides .guide .content p {
+    text-align: justify;
+}
+
+.div-button button{
+    border: 1px solid #AE431E;
+    color: #AE431E;
+    display: none;
+}
+
+.button-responsive {
+    display: inline-flex;
+    display: none;
+}
+
+.text-button {
+    margin: auto 19px auto 5px;
+}
+
+button i {
+    margin: auto 5px auto 12px;
+}
+
+
+
+
+/* - - - - - -- - - - - - - - - - - - - - - FOOTER  - - -- - - - - - -  --  - - --  -  - */
+
+footer {
+    direction: rtl;
+    width: 100%;
+    background-color: #EEE;
+    padding-top: 40px;
+}
+
+footer .caption{
+    font-family: 'IRANSans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.0016em;
+    color: #040502;
+    text-align: justify;
+}
+
+footer .list-items{
+    text-align: right;
+    list-style-type: none;
+    padding: 0px;
+    margin-top: 73px;
+}
+
+footer .first-ul{
+    margin-right: 45px;
+}
+
+footer .list-items a{
+    padding: 0px;
+    padding-bottom: 16px;
+}
+
+
+footer .social {
+    direction: ltr;
+    margin-bottom: 24px;
+}
+
+footer .social:first-child {
+    margin-top: 84px;
+}
+
+footer .social img{
+    height: 32px;
+    width: 32px;
+}
+
+footer .social:last-child img{
+    margin-right: 15px;
+}
+
+footer .trust img {
+    width: 109px;
+    height: 109px;
+    margin-bottom: 24px;
+    display: block;
+}
+
+footer .trust img:first-child {
+    margin-top: 40px;
+}
+
+footer .texts div:first-child p{
+    direction: rtl;
+    color: #040502;
+    font-family: 'IRANSans';
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.015em;
+    text-align: right;
+}
+
+footer .texts  div:last-child{
+    color: #040502;
+    direction: ltr;
+    font-family: 'IRANSans';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    direction: ltr;
+}
+
+.res-logo img{
+    height: 32px;
+    width: 131px;
+}
+
+/*  -- - - - - - - - - - - - -- -  -- -  - MEDIA QUERY - --  - -- - - -  - - - - - - - - - -  */
+@media screen and (max-width: 768px) {
+    .carousel-item {
+        height: 289px;
+    }
+    .carousel-control-prev , .carousel-control-next{
+        display: none;
+    }
+    .slide-content{
+        margin: 0 12px !important;
+    }
+    .slide-container{
+        padding: 0;
+    }
+    .swiper-navBtn{
+        display: none;
+    }
+    .header .top-header .img-jadegreen{
+        height: 27px;
+        width: 112px;
+        margin-bottom: 9px;
+    }
+    .div-button-login .cart {
+        margin-top: 10px;
+        margin-left: 24px;
+    }
+    #offers{
+        margin-top: 42px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-left: 16px;
+    }
+    #category{
+        margin-top: 68px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-left: 16px;
+    }
+    .button-seeAll{
+        display: none;
+    }
+    .div-button , .res-btn{
+        display: flex;
+        justify-content: flex-end;
+        margin: 0px;
+    }
+    #guides-posts .div-button {
+        margin-top: 24px;
+    }
+    .div-text-offCAT{
+        width: auto;
+    }
+    .text-offCAT{
+        font-family: 'IRANSans';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0.0025em;
+        text-align: right;  
+        margin: 0px;
+        padding: 0px;             
+    }
+    .container-fluid .text-right {
+         justify-content: start;
+         padding: 24px 16px 0px 0px; 
+    }
+    .product {
+        max-width: 186px;
+        border-radius: 5px;
+    }
+    .product-image{
+        max-width: 186px;
+        max-height: 140px;
+    }
+    .span-price{
+        margin: 0px 16px;
+    }
+    .husky-bird{
+        color: #040502;
+        font-family: 'IRANSans';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.005em;
+        text-align: right; 
+        margin: 6px 12px 14px 6px;  
+    }
+    .price{
+        font-family: 'IRANSans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: right;
+        letter-spacing: 0.001em;
+    }
+    .offer-badge{
+        display: none;
+    }
+    .span-price{
+        margin: 0px 6px;
+    }
+    .category{
+        max-width: 130px;
+        max-height: 130px;
+        border-radius: 5px;
+    }
+    .category-image{
+        width: 130px;
+        height: 130px;
+    }
+    .category p{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 23px;
+        letter-spacing: 0.0015em;
+        text-align: right;
+        padding-right: 12px;
+        padding-bottom: 12px;
+    }
+
+    #guides-posts {
+        padding-bottom: 78px;
+        padding-top: 24px;
+    }
+    .button{
+        display: none;
+    }
+    .button-responsive {
+        display: inline-flex !important;
+        width: 112px;
+        height: 30px;
+        border-radius: 5px !important;
+    }
+
+    .button-responsive span{
+        font-family: 'IRANSans';
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: right;
+        padding: 0px;
+        margin: 0px;
+        margin-top: 3px;
+    }
+    .button-responsive i{
+        font-size: 15px;
+        margin: 0px;
+        margin-top: 5px;
+        margin-right: 5px;
+        padding: 0px;
+    }
+
+    #guides-posts .button-responsive{
+        border-radius: 8px;
+        margin-top: 1px ;
+    }
+
+    #guides-posts .button-responsive i{
+        margin-top: 1px ;
+    }
+    .guides .guide{
+        margin-top: 24px;
+    }
+    
+
+    footer {
+        padding-top: 20px;
+        padding-right: 16px;
+    }
+
+    footer .list-items{
+        margin: 0px;
+        margin-top: 24px;
+    }
+
+    footer .trust img {
+        display: block;
+        height: 66px;
+        width: 66px;
+        border: none;
+        border-radius: 6px;
+        margin-bottom: 16px;
+        margin-top: 36px;
+    }
+
+    footer .social:first-child {
+        margin-top: 36px;
+    }
+
+    footer h3.caption{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0.0016em;
+        color:#040502; 
+        margin-top: 24px;
+        margin-bottom: 16px; 
+    }
+
+    footer .caption{
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.005em;
+        color: #383838;
+    }
+}
+  
+@media only screen and (max-width: 1280px) {
+    .guides {
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .guides .guide:last-child{
+        display: none;
+    }
+
+    .slide-content{
+      margin: 0px 80px;
+    }
+  
+}

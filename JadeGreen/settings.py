@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-(rx))^#u!6yabh$o4cf7(mp6_7f@)l^-n5n*!ww$q2godz(ff#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 AUTH_USER_MODEL = 'JadeUsers.CustomUser'
 # Application definition
@@ -43,7 +43,7 @@ ROOT_URLCONF = 'JadeGreen.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

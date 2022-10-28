@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+    {%block linkcss%}
+    <link rel="icon" type="image/x-icon" href="{% static 'images/Icon.svg'%}">
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    {%endblock linkcss%}
+    {%block title%}<title>Login</title>{%endblock title%}
+    <div class="form-container">
+        <div class="login-form">
+            <form id="loginForm">
+                <h1>ورود</h1>
+                <div class="form-group">
+                    <label for="username" class="username">
+                        <i class="material-symbols-outlined key">person</i>
+                        نام کاربری خود را وارد کنید
+                    </label>
+                    <input class="text-input" id="username" type="text" placeholder="نام کاربری" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="password" class="password">
+                        <span class="material-symbols-outlined key">
+                            vpn_key
+                        </span>
+                        رمز عبور
+                    </label>
+                    <input class="text-input key-box" id="password" type="password" placeholder=" رمز عبور " name="password">
+                </div>
+                <div class="form-group btn-container">
+                    <button class="btn" id="btn" type="submit" disabled>
+                        ورود
+                    </button>
+                </div>
+                <div class="div-forget-password">
+                    <a href="#" class="forget-password">رمز عبور خود را فراموش کردید؟</a>
+                </div>
+                <hr class="hr">
+                <div class="div-sign">
+                    <button class="sign">
+                        آیا حساب کاربری ندارید ؟ کلیک کنید
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="{% static 'js/login.js'%}"></script>
+{% endblock body %}

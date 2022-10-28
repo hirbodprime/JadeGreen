@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.contrib.auth import get_user_model , authenticate , login , logout
 from django.views.decorators.csrf import csrf_exempt
 from .serializers import UserSerializer , DetailUserSerializer 
@@ -19,7 +20,11 @@ from django.contrib.auth.hashers import check_password
 
 UserModel = get_user_model()
 
+def registerView(req):
+    return render(req , 'JadeUsers/SignUp.html')
 
+def loginView(req):
+    return render(req , 'JadeUsers/login.html')
 
 @api_view(["GET"])
 @permission_classes([p.IsAuthenticated])

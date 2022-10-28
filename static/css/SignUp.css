@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'IRANSans';
+    src: url("../fonts/IRANSans\(FaNum\).ttf");
+}
+body{
+    margin: 0;
+    direction: rtl;
+    font-family: 'IRANSans';
+    background-color: rgba(153, 178, 112, 0.5);
+}
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-form{
+    border:2px solid #CECFCD;
+    border-radius: 20px;
+    padding: 20px 80px;
+    max-width: 448px;
+    position: relative;
+    background-color: white;
+}
+
+.text-input{
+    display: block;
+    margin-top: 8px;
+    border-radius: 10px;
+    border: 2px solid #CECFCD;
+    height: 48px;
+    padding: 0px 10px;
+    font-size: 1.25em;
+    font-family: 'IRANSans';
+}
+
+.btn{
+    display: block;
+    padding: 5px 12px;
+    transition: 0.4s;
+    border-radius: 10px;
+    font-size: 1.03em;
+    background-color: #AFB1AF;
+    border: 1px solid #AFB1AF;
+    color: white ;
+    height: 48px;
+    font-family: 'IRANSans';
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+
+}
+.form-group{
+    margin:20px 5px;
+    display: flex;
+    flex-direction: column;
+}
+.username , .password{
+    display: flex;
+    margin-bottom: 24px;
+}
+.mail , .key{
+    padding-left: 10px;
+}
+.but i, label i{
+    margin-left: 10px;
+}
+.mail-bax , .key-box{
+    margin-bottom: 20px;
+}
+.mail-bax::placeholder , .key-box::placeholder{
+    color: #AFB1AF;
+}
+.div-sign{
+    margin:20px 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'IRANSans';
+
+}
+.link{
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    font-size: 1.03em;
+    justify-content: center;
+    font-family: 'IRANSans';
+}
+.forget-password{
+    text-decoration: none;
+    color: #AE431E;
+}
+.hr{
+    margin-top: 20px;
+    color: #AFB1AF;
+}
+
+.sign{
+    border: 2px solid #46552E;
+    background-color: #FFFFFF;
+    border-radius: 100px;
+    height: 52px;
+    display: block;
+    font-family: 'IRANSans';
+    font-size: 14px;
+    color: #46552E;
+    cursor: pointer;
+}
+
+#error{
+    display: none;
+    margin: 0px;
+    color: rgb(255,0,0);
+}
+
+#success{
+    padding: 5px;
+    background-color: #4FBF26;
+    color: #000;
+    display: none;
+}
+/* hirbod */
+.div-sign button a {
+    text-decoration: none;
+    color: black;
+} 

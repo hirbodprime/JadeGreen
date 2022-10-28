@@ -3,6 +3,8 @@ from . import views as v
 from rest_framework.authtoken.views import obtain_auth_token 
 
 urlpatterns = [
+    path('Login/' , v.loginView , name="loginviewname"),
+    path('Register/' , v.registerView, name="registerviewname"),
     path('UserDetail/<int:pk>/' , v.DetailUsersAPIView.as_view()),
     path('register/' , v.CreateUserAPIView.as_view()),
     path('UsersList/' , v.ListUsersAPIView.as_view()),

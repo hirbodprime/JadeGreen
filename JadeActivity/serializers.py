@@ -6,3 +6,4 @@ class ActivitiesModelSerializers(serializers.ModelSerializer):
         model = ActivitiesModel 
         fields = ('name' , 'discription')
         #  depth = 1 returns the data of forgein key models nested 
+        # read_only_fields

@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/Icon.svg' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    {%block linkcss%}{%endblock linkcss%}
+    {%block title%}{%endblock title%}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>JadeGreen</title>
+</head>
+<body>
+    
+    <!-- ---------------------------------header--------------------------------------- -->
+  <header class="header">
+    <div class="container-fluid">
+        <div class="row top-header">
+            <div class="col-lg-6 col-sm-7 col-8 text-lg-center order-lg-2">
+                <i class="material-symbols-outlined d-lg-none menu" id="humberger-menu">menu</i>
+                <img class="img-jadegreen" src="{% static 'images/Jade green.png' %}">
+            </div>
+            <div class="col-lg-3 col-sm-5 col-4 text-start order-lg-2 div-button-login">
+                <button type="button" class="button-login d-none d-md-flex">
+                    <i class="material-symbols-outlined person">person</i>
+                    <span> <a href="{% url 'loginviewname' %}"> ورود و ثبت نام </a> </span>
+                </button>
+                <i class="material-symbols-outlined cart">shopping_cart</i>
+                <a href="{% url 'loginviewname' %}"><i class="material-symbols-outlined d-md-none person2">person</i></a>
+            </div>
+            <div class="col-lg-3 order-md-1">
+                <form>
+                    <div class="div-search-box">
+                        <span class="material-symbols-outlined search">
+                            search
+                        </span>
+                        <input type="search" class="search-box" placeholder="جستجو کنید" name="search">
+                    </div>
+                </form>
+            </div>
+        </div>
+    <hr>
+        <div class="menu d-lg-block d-none">
+            <ul>
+                <li class="dropdown"> <a class="dropbtn" href="#"> پوشاک 
+                    <i class="material-symbols-outlined">expand_more</i> </a>
+                    <div class="dropdown-content">
+                        <a class="" href="{% url 'homeviewname' %}"> کاپشن و بادگیر کوهنوردی </a>
+                        <a class="" href="{% url 'homeviewname' %}"> دستکش کوهنوردی و اسکی </a>
+                        <a class="" href="{% url 'homeviewname' %}"> جوراب های کوهنوردی </a>
+                    </div>
+                </li>
+                <li class="dropdown"> <a class="dropbtn" href="#"> کیف و کوله 
+                    <i class="material-symbols-outlined">expand_more</i> </a>
+                    <div class="dropdown-content">
+                        <a class="" href="{% url 'homeviewname' %}"> کاپشن و بادگیر کوهنوردی </a>
+                        <a class="" href="{% url 'homeviewname' %}"> دستکش کوهنوردی و اسکی </a>
+                        <a class="" href="{% url 'homeviewname' %}"> جوراب های کوهنوردی </a>
+                </li>
+                <li class="dropdown"> <a class="dropbtn" href="#"> کفش و صندل <i
+                            class="material-symbols-outlined">expand_more</i> </a>
+                    <div class="dropdown-content">
+                        <a class="" href="{% url 'homeviewname' %}"> کاپشن و بادگیر کوهنوردی </a>
+                        <a class="" href="#"> دستکش کوهنوردی و اسکی </a>
+                        <a class="" href="#"> جوراب های کوهنوردی </a>
+                </li>
+                <li class="dropdown"> <a class="dropbtn" href="#"> تجهیزات کمپ <i
+                            class="material-symbols-outlined">expand_more</i> </a>
+                    <div class="dropdown-content">
+                        <a class="" href="#"> کاپشن و بادگیر کوهنوردی </a>
+                        <a class="" href="#"> دستکش کوهنوردی و اسکی </a>
+                        <a class="" href="#"> جوراب های کوهنوردی </a>
+                </li>
+                <li class="dropdown"> <a class="dropbtn" href="#"> تجهیزات فنی <i
+                            class="material-symbols-outlined">expand_more</i> </a>
+                    <div class="dropdown-content">
+                        <a class="" href="#"> کاپشن و بادگیر کوهنوردی </a>
+                        <a class="" href="#"> دستکش کوهنوردی و اسکی </a>
+                        <a class="" href="#"> جوراب های کوهنوردی </a>
+                </li>
+                <li> <a href="#"> شعب فروشگاه های ما </a> </li>
+                <li> <a href="#"> درباره ما </a> </li>
+                <li> <a href="#"> بلاگ </a> </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+    <div class="responsive-nav">
+        <div class="responsive-logo">
+            <img class="img-jadegreen" src="{% static 'images/Jade green.png' %}">
+        </div>
+        <ul>
+            <li class="dropdown"><a href="#"> صفحه اصلی </a></li>
+            <li class="dropdown"><a href="#"> پوشاک </a></li>
+            <li class="dropdown"><a href="#"> تجهیزات </a></li>
+            <li class="dropdown"><a href="#"> آدرس فروشگاه ها </a></li>
+            <li class="dropdown"><a href="#"> پرسش و پاسخ</a></li>
+            <li class="dropdown"><a href="#"> تماس با ما </a></li>
+            <li class="dropdown"><a href="#"> تماس با ما </a></li>
+            <li class="dropdown"><a href="#"> درباره ما </a></li>
+        </ul>
+    </div>
+
+</header>
+
+{% block body %}{% endblock body %}
+<footer>
+    <div class="container">
+      <div class="row">
+          <div class="res-logo d-md-none d-block">
+              <img class="img-fluid img-jadegreen" src="{% static 'images/logo-responsive.png' %}" alt="logo">
+          </div>
+          <div class="order-5 order-md-1 col-xl-5">
+              <img class="img-fluid img-jadegreen d-none d-md-flex" src="{% static 'images/Jade green.png' %}" alt="logo">
+              <h3 class="caption">مرجع فروش وسایل کوهنوردی</h3>
+              <p class="caption">
+                  فروشگاه وسایل کوهنوردی جاده گرین در آستانه شروع به کار وب سایت خود پس از سالها تجربه در بازار وسایل کوهنوردی با ارائه خدمات فروش آنلاین لوازم کوهنوردی تلاش کرده است هر چه بیشتر نسبت به رفاه حال شما مشتریان عزیز گام بردارد ، سرعت در ارسال، پشتیبانی متعهدانه و تنوع در محصولات و قیمت ، از اهداف اصلی فروشگاه آنلاین کوهنوردی هستند .
+              </p>
+          </div>
+          <div class="order-sm-1 ordr-md-2 col-6 col-md-3 col-xl-2  div-ul">
+              <ul class="list-items first-ul">
+                  <li><a href="#">تجهیزات فنی</a></li>
+                  <li><a href="#"> تجهیزات کمپ </a></li>
+                  <li><a href="#"> کفش و صندل </a></li>
+                  <li><a href="#">  کیف و کوله </a></li>
+              </ul>
+          </div>
+          <div class="order-sm-2 order-md-3 col-6 col-md-3 col-xl-2">
+              <ul class="list-items second-ul">
+                  <li><a href="#"> پوشاک </a></li>
+                  <li><a href="#"> شعب فروشگاه های ما </a></li>
+                  <li><a href="#"> درباره ما </a></li>
+                  <li><a href="#"> بلاگ </a></li>
+              </ul>
+          </div>
+          <div class="order-md-4 order-4 col-6 col-md-4 col-xl-2">
+              <div class="social">
+                  <img class="img-fluid" src="{% static 'images/telegram.png' %}" alt="Telegram">
+                  <span>@jadegreenshop</span>
+              </div>
+              <div class="social">
+                  <img class="img-fluid" src="{% static 'images/instagram.png' %}" alt="Instagram">
+                  <span>@jadegreenshop</span>
+              </div>
+              <div class="social">
+                  <img class="img-fluid" src="{% static 'images/whatsapp.png' %}" alt="Whatsapp">
+                  <span>0912987654321</span>
+              </div>
+          </div>
+          <div class="trust order-md-5 order-3 col-6 col-md-2 col-xl-1">
+              <img src="{% static 'images/Enamad.png' %}" alt="Enamad">
+              <img src="{% static 'images/zarin.png' %}" alt="zarin">
+          </div>
+      </div>
+      <hr>
+      <div class="texts row">
+          <div class="col-md-6">
+              <p>تمامی حقوق این وبسایت برای فروشگاه کوهنوردی محفوظ است</p>
+          </div>
+          <div class="col-md-6 d-none d-md-flex"> 
+              <p>Copyright 2022 - 2022, Benamehonar. All rights reserved</p>
+          </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="{% static 'js/ResponsiveMenu.js' %}"></script>
+  <script src="{% static 'js/Ajax.js' %}"></script>
+  <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+  <!-- <script src="{% static 'js/main-slider.js' %}"></script> -->
+  <script>
+    function myFunction(x) {
+    if (x.matches) { 
+        document.getElementById("image1-slider").src = "{% static 'images/img1-res.jpg' %}" ;
+        document.getElementById("image2-slider").src = "{% static 'images/img2-res.jpg' %}" ;
+    } else {
+        document.getElementById("image1-slider").src = "{% static 'images/img1.jpg' %}" ;
+        document.getElementById("image2-slider").src = "{% static 'images/img2.jpg' %}" ;
+    }
+    }
+    
+    var x = window.matchMedia("(max-width: 768px)")
+    myFunction(x) 
+    x.addListener(myFunction) 
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

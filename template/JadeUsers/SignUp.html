@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/Icon.svg'%}">
+    <link rel="stylesheet" href="{% static 'css/SignUp.css'%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>SignUp</title>
+</head>
+<body>
+    <div class="form-container">
+        <div class="login-form">
+            <form id="post-form">
+                <h1>ثبت نام</h1>
+                <h3 id="success"> حساب شما با موفقیت ساخته شد </h3>
+                <div class="form-group">                  
+                        <label for="username" class="username">
+                            <i class="material-symbols-outlined key">person</i>
+                                نام کاربری        
+                        </label>
+                        <input class="text-input" id="username" type="text" placeholder="نام کاربری" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password" class="password">
+                        <i class="material-symbols-outlined key">vpn_key</i>
+                        رمز عبور
+                    </label>
+                    <input class="text-input key-box" id="password" type="password" placeholder=" رمز عبور " name="password">
+                </div>
+                <div class="form-group">
+                    <label for="password" class="password">
+                        <i class="material-symbols-outlined key">vpn_key</i>
+                        تکرار رمز عبور
+                    </label>
+                    <input class="text-input key-box" id="passwordRepeat" type="password" placeholder=" رمز عبور " name="passwordRepeat">
+                </div>
+                <p id="error"> رمز عبور ها یکی نمی باشد </p>
+                <div class="form-group btn-container">
+                    <button class="btn" id="btn" type="submit" disabled>
+                        ورود
+                    </button>
+                </div>
+                <div class="div-forget-password">
+                    <a href="#" class="forget-password">رمز عبور خود را فراموش کردید؟</a>
+                </div>
+                <hr class="hr">
+                <div class="div-sign">
+                    <button class="sign">
+                        <a href="{% url 'loginviewname' %}">
+                        حساب کاربری دارید ؟ کلیک کنید
+                    </a>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="{% static 'js/SignUp.js'%}"></script>
+    
+</body>
+</html>

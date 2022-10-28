@@ -4,6 +4,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
+    path('', include("JadeHome.urls")),
     path('admin/', admin.site.urls),
     path('JadeShop/' , include('JadeShop.urls')),
     path('JadeBlog/' , include('JadeBlog.urls')),
