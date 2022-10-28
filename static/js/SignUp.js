@@ -45,10 +45,8 @@ $(document).ready(function(){
                     alert_toast("An error occured", 'error');
                 },
                 success: function(resp) {
-                    console.log("here1")
                     if (resp.status == 'success') {
                         el.removeClass("alert alert-danger err-msg")
-                        console.log("here")
                         location.href = "http://127.0.0.1:8000/"
                     } else if (resp.status == 'failed' && !!resp.msg) {
                         el.text(resp.msg)

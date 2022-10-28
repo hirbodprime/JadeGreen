@@ -109,7 +109,6 @@ def register_userview(request):
             # if user.is_active:
                 login(request, user)
                 resp['status']='success'
-                print(resp)
                 # return redirect("/")
             # else:
             #     resp['msg'] = "Incorrect username or password"
