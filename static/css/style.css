@@ -123,6 +123,12 @@ body {
     color: #46552E;
     cursor: pointer;
 }
+/* hirbod */
+.cart a{
+    text-decoration: none;
+    color: #46552E;
+}
+
 
 .person {
     font-size: 24px;
@@ -353,7 +359,11 @@ li a,.dropbtn {
     letter-spacing: 0.0025em;
     text-align: right;
 }
-
+/* hirbod */
+.button-seeAll a{
+    text-decoration: none;
+    color: #FBFCFA ;
+}
 .button-seeAll {
     display: flex;
     cursor: pointer;
@@ -606,6 +616,31 @@ li a,.dropbtn {
 
 .text-button {
     margin: auto 19px auto 5px;
+}
+/* hirbod */
+.seeallA {
+    text-decoration: none;
+    color: black ;
+}
+/* hirbod */
+.seeallA:hover {
+    color: black ;
+}
+/* hirbod */
+.seeallAres {
+    text-decoration: none;
+    color: #AE431E ;
+}
+/* hirbod */
+.seeallAres:hover {
+    color: #AE431E ;
+}
+.seeAllresWhite {
+    text-decoration: none;
+    color:#fff ;
+}
+.seeAllresWhite:hover {
+    color:#fff ;
 }
 
 button i {

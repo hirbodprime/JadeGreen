@@ -3,5 +3,5 @@ from .views import ActivitiesListViewApi
 
 urlpatterns = [
 
-    path('' , ActivitiesListViewApi.as_view())
+    path('api/' , ActivitiesListViewApi.as_view())
 ]

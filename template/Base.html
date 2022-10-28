@@ -22,14 +22,14 @@
         <div class="row top-header">
             <div class="col-lg-6 col-sm-7 col-8 text-lg-center order-lg-2">
                 <i class="material-symbols-outlined d-lg-none menu" id="humberger-menu">menu</i>
-                <img class="img-jadegreen" src="{% static 'images/Jade green.png' %}">
+                <a href="{% url 'homeviewname' %}"><img class="img-jadegreen" src="{% static 'images/Jade green.png' %}"></a>
             </div>
             <div class="col-lg-3 col-sm-5 col-4 text-start order-lg-2 div-button-login">
                 <button type="button" class="button-login d-none d-md-flex">
-                    <i class="material-symbols-outlined person">person</i>
+                    <i class="material-symbols-outlined person"><a href="{% url 'loginviewname' %}">person</a></i>
                     <span> <a href="{% url 'loginviewname' %}"> ورود و ثبت نام </a> </span>
                 </button>
-                <i class="material-symbols-outlined cart">shopping_cart</i>
+                <i class="material-symbols-outlined cart"><a href="{% url 'homeviewname' %}">shopping_cart</a></i>
                 <a href="{% url 'loginviewname' %}"><i class="material-symbols-outlined d-md-none person2">person</i></a>
             </div>
             <div class="col-lg-3 order-md-1">
@@ -46,7 +46,7 @@
     <hr>
         <div class="menu d-lg-block d-none">
             <ul>
-                <li class="dropdown"> <a class="dropbtn" href="#"> پوشاک 
+                <li class="dropdown"> <a class="dropbtn" href="{% url 'homeviewname' %}"> پوشاک 
                     <i class="material-symbols-outlined">expand_more</i> </a>
                     <div class="dropdown-content">
                         <a class="" href="{% url 'homeviewname' %}"> کاپشن و بادگیر کوهنوردی </a>
@@ -54,37 +54,37 @@
                         <a class="" href="{% url 'homeviewname' %}"> جوراب های کوهنوردی </a>
                     </div>
                 </li>
-                <li class="dropdown"> <a class="dropbtn" href="#"> کیف و کوله 
+                <li class="dropdown"> <a class="dropbtn" href="{% url 'homeviewname' %}"> کیف و کوله 
                     <i class="material-symbols-outlined">expand_more</i> </a>
                     <div class="dropdown-content">
                         <a class="" href="{% url 'homeviewname' %}"> کاپشن و بادگیر کوهنوردی </a>
                         <a class="" href="{% url 'homeviewname' %}"> دستکش کوهنوردی و اسکی </a>
                         <a class="" href="{% url 'homeviewname' %}"> جوراب های کوهنوردی </a>
                 </li>
-                <li class="dropdown"> <a class="dropbtn" href="#"> کفش و صندل <i
+                <li class="dropdown"> <a class="dropbtn" href="{% url 'homeviewname' %}"> کفش و صندل <i
                             class="material-symbols-outlined">expand_more</i> </a>
                     <div class="dropdown-content">
                         <a class="" href="{% url 'homeviewname' %}"> کاپشن و بادگیر کوهنوردی </a>
-                        <a class="" href="#"> دستکش کوهنوردی و اسکی </a>
-                        <a class="" href="#"> جوراب های کوهنوردی </a>
+                        <a class="" href="{% url 'homeviewname' %}"> دستکش کوهنوردی و اسکی </a>
+                        <a class="" href="{% url 'homeviewname' %}"> جوراب های کوهنوردی </a>
                 </li>
-                <li class="dropdown"> <a class="dropbtn" href="#"> تجهیزات کمپ <i
+                <li class="dropdown"> <a class="dropbtn" href="{% url 'homeviewname' %}"> تجهیزات کمپ <i
                             class="material-symbols-outlined">expand_more</i> </a>
                     <div class="dropdown-content">
-                        <a class="" href="#"> کاپشن و بادگیر کوهنوردی </a>
-                        <a class="" href="#"> دستکش کوهنوردی و اسکی </a>
-                        <a class="" href="#"> جوراب های کوهنوردی </a>
+                        <a class="" href="{% url 'homeviewname' %}"> کاپشن و بادگیر کوهنوردی </a>
+                        <a class="" href="{% url 'homeviewname' %}"> دستکش کوهنوردی و اسکی </a>
+                        <a class="" href="{% url 'homeviewname' %}"> جوراب های کوهنوردی </a>
                 </li>
-                <li class="dropdown"> <a class="dropbtn" href="#"> تجهیزات فنی <i
+                <li class="dropdown"> <a class="dropbtn" href="{% url 'homeviewname' %}"> تجهیزات فنی <i
                             class="material-symbols-outlined">expand_more</i> </a>
                     <div class="dropdown-content">
-                        <a class="" href="#"> کاپشن و بادگیر کوهنوردی </a>
-                        <a class="" href="#"> دستکش کوهنوردی و اسکی </a>
-                        <a class="" href="#"> جوراب های کوهنوردی </a>
+                        <a class="" href="{% url 'homeviewname' %}"> کاپشن و بادگیر کوهنوردی </a>
+                        <a class="" href="{% url 'homeviewname' %}"> دستکش کوهنوردی و اسکی </a>
+                        <a class="" href="{% url 'homeviewname' %}"> جوراب های کوهنوردی </a>
                 </li>
-                <li> <a href="#"> شعب فروشگاه های ما </a> </li>
-                <li> <a href="#"> درباره ما </a> </li>
-                <li> <a href="#"> بلاگ </a> </li>
+                <li> <a href="{% url 'homeviewname' %}"> شعب فروشگاه های ما </a> </li>
+                <li> <a href="{% url 'homeviewname' %}"> درباره ما </a> </li>
+                <li> <a href="{% url 'homeviewname' %}"> بلاگ </a> </li>
             </ul>
         </div>
     </div>
@@ -95,14 +95,14 @@
             <img class="img-jadegreen" src="{% static 'images/Jade green.png' %}">
         </div>
         <ul>
-            <li class="dropdown"><a href="#"> صفحه اصلی </a></li>
-            <li class="dropdown"><a href="#"> پوشاک </a></li>
-            <li class="dropdown"><a href="#"> تجهیزات </a></li>
-            <li class="dropdown"><a href="#"> آدرس فروشگاه ها </a></li>
-            <li class="dropdown"><a href="#"> پرسش و پاسخ</a></li>
-            <li class="dropdown"><a href="#"> تماس با ما </a></li>
-            <li class="dropdown"><a href="#"> تماس با ما </a></li>
-            <li class="dropdown"><a href="#"> درباره ما </a></li>
+            <li class="dropdown"><a href="{% url 'homeviewname' %}"> صفحه اصلی </a></li>
+            <li class="dropdown"><a href="{% url 'homeviewname' %}"> پوشاک </a></li>
+            <li class="dropdown"><a href="{% url 'homeviewname' %}"> تجهیزات </a></li>
+            <li class="dropdown"><a href="{% url 'homeviewname' %}"> آدرس فروشگاه ها </a></li>
+            <li class="dropdown"><a href="{% url 'homeviewname' %}"> پرسش و پاسخ</a></li>
+            <li class="dropdown"><a href="{% url 'homeviewname' %}"> تماس با ما </a></li>
+            <li class="dropdown"><a href="{% url 'homeviewname' %}"> تماس با ما </a></li>
+            <li class="dropdown"><a href="{% url 'homeviewname' %}"> درباره ما </a></li>
         </ul>
     </div>
 
@@ -124,18 +124,18 @@
           </div>
           <div class="order-sm-1 ordr-md-2 col-6 col-md-3 col-xl-2  div-ul">
               <ul class="list-items first-ul">
-                  <li><a href="#">تجهیزات فنی</a></li>
-                  <li><a href="#"> تجهیزات کمپ </a></li>
-                  <li><a href="#"> کفش و صندل </a></li>
-                  <li><a href="#">  کیف و کوله </a></li>
+                  <li><a href="{% url 'homeviewname' %}">تجهیزات فنی</a></li>
+                  <li><a href="{% url 'homeviewname' %}"> تجهیزات کمپ </a></li>
+                  <li><a href="{% url 'homeviewname' %}"> کفش و صندل </a></li>
+                  <li><a href="{% url 'homeviewname' %}">  کیف و کوله </a></li>
               </ul>
           </div>
           <div class="order-sm-2 order-md-3 col-6 col-md-3 col-xl-2">
               <ul class="list-items second-ul">
-                  <li><a href="#"> پوشاک </a></li>
-                  <li><a href="#"> شعب فروشگاه های ما </a></li>
-                  <li><a href="#"> درباره ما </a></li>
-                  <li><a href="#"> بلاگ </a></li>
+                  <li><a href="{% url 'homeviewname' %}"> پوشاک </a></li>
+                  <li><a href="{% url 'homeviewname' %}"> شعب فروشگاه های ما </a></li>
+                  <li><a href="{% url 'homeviewname' %}"> درباره ما </a></li>
+                  <li><a href="{% url 'homeviewname' %}"> بلاگ </a></li>
               </ul>
           </div>
           <div class="order-md-4 order-4 col-6 col-md-4 col-xl-2">
