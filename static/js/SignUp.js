@@ -17,17 +17,25 @@ $(document).ready(function(){
         }
     })
 
-        $("#post-form").submit(function(e){
-            e.preventDefault();
-            var _this = $(this)
-            $('.err-msg').remove();
-            var el = $('<div>')
-            el.addClass("alert alert-danger err-msg")
-            el.hide()
-            if (_this[0].checkValidity() == false) {
-                _this[0].reportValidity();
-                return false;
-            }
+    $("#post-form").submit(function(e){
+        var password = $("#password").val();
+        var passwordRepeat = $("#passwordRepeat").val();
+        var error = $("#error");
+        e.preventDefault();
+        var _this = $(this);
+        $('.err-msg').remove();
+        var el = $('<div>');
+        el.addClass("alert alert-danger err-msg");
+        el.hide();
+        if (_this[0].checkValidity() == false) {
+            _this[0].reportValidity();
+            return false;
+        }
+        if (password != passwordRepeat) {
+            error.show();
+            return false;
+        } else {
+            error.hide();
             $.ajax({
                 headers: {
                     "X-CSRFToken": '{{csrf_token}}'
@@ -46,8 +54,9 @@ $(document).ready(function(){
                 },
                 success: function(resp) {
                     if (resp.status == 'success') {
-                        el.removeClass("alert alert-danger err-msg")
-                        location.href = "http://127.0.0.1:8000/"
+                        el.removeClass("alert alert-danger err-msg");
+                        location.href = "http://127.0.0.1:8000/";
+
                     } else if (resp.status == 'failed' && !!resp.msg) {
                         el.text(resp.msg)
                     } else {
@@ -58,35 +67,10 @@ $(document).ready(function(){
                     el.show('slow')
                 }
             })
-            
-        });
-        // var password = $("#password").val();
-        // var passwordRepeat = $("#passwordRepeat").val();
-        // var error = $("#error");
-
-        // if (password != passwordRepeat) {
-        //     error.show();
-        //     return false;
-        // } else {
-        //     error.hide();
-        //     // Ajax
-        //     $.ajax({
-        //         method : 'POST',
-        //         url : '',
-        //         data : {
-        //             username: $('#username').val(),
-        //             password: $('#password').val(),
-        //             passwordRepeat: $('#passwordRepeat').val(),
-        //             crsfmiddlewaretoken : $('input[username=crsfmiddlewaretoken]').val()
-        //         },
-        //         success : function (result){
-                      
-        //         }
-
-        //     }) 
-        // }
-
+        }
+        
     });
+});
 
 
 

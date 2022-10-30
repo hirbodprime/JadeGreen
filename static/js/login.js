@@ -12,9 +12,13 @@ $(document).ready(function(){
         }else{
             $('#btn').prop("disabled",true);
             btnElement.css('background', '#AFB1AF');
+            btnElement.css('cursor', 'default');
         }
+        
     })
+
     $("#loginForm").submit(function(e){
+        
         e.preventDefault();
         var _this = $(this)
         $('.err-msg').remove();
@@ -56,9 +60,6 @@ $(document).ready(function(){
                 _this.prepend(el)
                 el.show('slow')
             }
-        })
-        
+        })        
     });
-
-
 });

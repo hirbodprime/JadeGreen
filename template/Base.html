@@ -27,7 +27,11 @@
             <div class="col-lg-3 col-sm-5 col-4 text-start order-lg-2 div-button-login">
                 <button type="button" class="button-login d-none d-md-flex">
                     <i class="material-symbols-outlined person"><a href="{% url 'loginviewname' %}">person</a></i>
-                    <span> <a href="{% url 'loginviewname' %}"> ورود و ثبت نام </a> </span>
+                    {% if user.is_authenticated %}
+                    <span> <a href="{% url 'loginviewname' %}"> {{user.username}} </a> </span>
+                    {% else %}
+                    <span> <a href="{% url 'loginviewname' %}"> ورود و ثبت نام  </a> </span>
+                    {% endif %}
                 </button>
                 <i class="material-symbols-outlined cart"><a href="{% url 'homeviewname' %}">shopping_cart</a></i>
                 <a href="{% url 'loginviewname' %}"><i class="material-symbols-outlined d-md-none person2">person</i></a>
