@@ -54,8 +54,9 @@ $(document).ready(function(){
                 },
                 success: function(resp) {
                     if (resp.status == 'success') {
-                        el.removeClass("alert alert-danger err-msg")
-                        location.href = "http://127.0.0.1:8000/"
+                        el.removeClass("alert alert-danger err-msg");
+                        location.href = "http://127.0.0.1:8000/";
+
                     } else if (resp.status == 'failed' && !!resp.msg) {
                         el.text(resp.msg)
                     } else {
