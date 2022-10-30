@@ -267,6 +267,14 @@ li a,.dropbtn {
     bottom: 0px;
     left: 0px;
 }
+
+.button-after-login {
+    direction: ltr;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
 /* - - - -  - - - - - - - - - - - - - - - - - SLIDER - - - - -  - - - - - - -  - - - - -  - */
 #carousel {
     margin-top: 0px;
