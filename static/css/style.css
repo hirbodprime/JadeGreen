@@ -267,6 +267,14 @@ li a,.dropbtn {
     bottom: 0px;
     left: 0px;
 }
+
+.button-after-login {
+    direction: ltr;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
 /* - - - -  - - - - - - - - - - - - - - - - - SLIDER - - - - -  - - - - - - -  - - - - -  - */
 #carousel {
     margin-top: 0px;
@@ -683,6 +691,10 @@ footer .first-ul{
 footer .list-items a{
     padding: 0px;
     padding-bottom: 16px;
+}
+
+footer ul.list-items a:hover{
+    color: #46552E !important;
 }
 
 

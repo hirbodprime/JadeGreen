@@ -71,6 +71,12 @@ $(document).ready(function(){
         
     });
 });
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 4bfb29fb27634aab4bd6cf5c7eb223d98b15a070
 
 
 
