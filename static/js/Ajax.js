@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $.ajax({
         method : 'GET',
-        url : 'https://jadegreen.pythonanywhere.com/JadeShop/',
+        url : 'https://jadegreen.pythonanywhere.com/shop/api/',
         success : function (result)
         {
             var array = result.results;
@@ -29,7 +29,7 @@ $(document).ready(function () {
     })
     $.ajax({
         method : 'GET',
-        url : 'https://jadegreen.pythonanywhere.com/JadeActivity/',
+        url : 'https://jadegreen.pythonanywhere.com/activity/api/',
         success : function (result)
         {
             var array = result.results;
@@ -50,7 +50,7 @@ $(document).ready(function () {
     })
     $.ajax({
         method : 'GET',
-        url : 'https://jadegreen.pythonanywhere.com/JadeBlog/',
+        url : 'https://jadegreen.pythonanywhere.com/blog/api/',
         success : function (result)
         {
             var array = result.results;
@@ -73,12 +73,12 @@ $(document).ready(function () {
                       <div class="col-3 d-md-none d-sm-block text-more">
                         <span>بیشتر</span>
                         <i class="material-symbols-outlined">keyboard_backspace</i>
-                      </div>    
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-        
+
                 `
             }
             $('.guides').html(contents);
