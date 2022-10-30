@@ -685,6 +685,10 @@ footer .list-items a{
     padding-bottom: 16px;
 }
 
+footer .list-items li:hover{
+    color: #46552E !important;
+}
+
 
 footer .social {
     direction: ltr;
